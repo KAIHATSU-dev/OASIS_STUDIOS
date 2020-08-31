@@ -25,6 +25,7 @@ public class Gun : MonoBehaviour
     void Start()
     {
         currentAmmo = maxAmmo;
+        animator.GetComponent<Animator>();
     }
 
     void OnEnable()

@@ -11,10 +11,11 @@ public class enemy_2 : MonoBehaviour
 
     public GameObject Player;
 
-    public float MobDistanceRun = 4.0f;
+    public float MobDistanceRun = 6.0f;
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         Mob = GetComponent<NavMeshAgent>();
 
     }
@@ -36,7 +37,7 @@ public class enemy_2 : MonoBehaviour
          Vector3 dirToPlayer = transform.position - Player.transform.position;
             Vector3 newPos = transform.position - dirToPlayer;
             Mob.SetDestination(newPos);
-            animator.SetBool("Run", true);
+            animator.SetBool("Chase", true);
     }
 
 }
